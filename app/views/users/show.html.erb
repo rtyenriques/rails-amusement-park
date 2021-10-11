@@ -1,0 +1,12 @@
+<%= @user.name %>
+<%if @user.admin%>
+ADMIN
+<%else%>
+Mood<%= @user.mood%><br>
+
+Tickets<%=@user.tickets%><br>
+<%=@user.height%>
+
+<%end%>
+<%=link_to 'Log Out', "/logout", method: :delete %>
+<%= link_to 'See attractions', attractions_path%>
